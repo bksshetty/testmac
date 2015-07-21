@@ -1082,6 +1082,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1128,6 +1129,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1156,6 +1158,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = "First Shoe Experience/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1182,6 +1185,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				INFOPLIST_FILE = "First Shoe Experience/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
