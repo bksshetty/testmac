@@ -163,6 +163,8 @@
 		F9D806FB1B01FFF200D41E5C /* launch-img.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D806FA1B01FFF200D41E5C /* launch-img.png */; };
 		F9D806FD1B02037500D41E5C /* clarks-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D806FC1B02037500D41E5C /* clarks-logo.png */; };
 		F9DAE12D1B05FF7000AC3589 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = F9DAE12C1B05FF7000AC3589 /* close.png */; };
+		F9DDE2F21B623BE90066A8D8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DDE2F01B623BE90066A8D8 /* Fabric.framework */; };
+		F9DDE2F31B623BE90066A8D8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9DDE2F11B623BE90066A8D8 /* Crashlytics.framework */; };
 		F9E9C3821B173AC500CBC659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E9C3811B173AC500CBC659 /* UIKit.framework */; };
 		F9E9C3841B173ADB00CBC659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E9C3831B173ADB00CBC659 /* Foundation.framework */; };
 		F9E9C3861B173AEC00CBC659 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E9C3851B173AEC00CBC659 /* SystemConfiguration.framework */; };
@@ -402,6 +404,8 @@
 		F9D806FA1B01FFF200D41E5C /* launch-img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-img.png"; sourceTree = "<group>"; };
 		F9D806FC1B02037500D41E5C /* clarks-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clarks-logo.png"; sourceTree = "<group>"; };
 		F9DAE12C1B05FF7000AC3589 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		F9DDE2F01B623BE90066A8D8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		F9DDE2F11B623BE90066A8D8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		F9E9C37F1B1739AF00CBC659 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F9E9C3811B173AC500CBC659 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9E9C3831B173ADB00CBC659 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -423,6 +427,8 @@
 				F9E9C38C1B173B1000CBC659 /* CoreGraphics.framework in Frameworks */,
 				F9E9C38A1B173B0800CBC659 /* Accelerate.framework in Frameworks */,
 				F9E9C3881B173AF800CBC659 /* CoreTelephony.framework in Frameworks */,
+				F9DDE2F21B623BE90066A8D8 /* Fabric.framework in Frameworks */,
+				F9DDE2F31B623BE90066A8D8 /* Crashlytics.framework in Frameworks */,
 				F9E9C3861B173AEC00CBC659 /* SystemConfiguration.framework in Frameworks */,
 				F9E9C3841B173ADB00CBC659 /* Foundation.framework in Frameworks */,
 				F9E9C3821B173AC500CBC659 /* UIKit.framework in Frameworks */,
@@ -444,6 +450,8 @@
 			children = (
 				F9E9C3911B173F8500CBC659 /* libicucore.dylib */,
 				F98FDAAC1B4A5EB800C214DD /* libMPCategoryHelpers.a */,
+				F9DDE2F01B623BE90066A8D8 /* Fabric.framework */,
+				F9DDE2F11B623BE90066A8D8 /* Crashlytics.framework */,
 				F9E9C38D1B173B1A00CBC659 /* QuartzCore.framework */,
 				F9E9C38B1B173B1000CBC659 /* CoreGraphics.framework */,
 				F9E9C3891B173B0800CBC659 /* Accelerate.framework */,
@@ -778,6 +786,7 @@
 				3820BF751B00986E008C93E2 /* Sources */,
 				3820BF761B00986E008C93E2 /* Frameworks */,
 				3820BF771B00986E008C93E2 /* Resources */,
+				F9DDE2EF1B623BC10066A8D8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -923,6 +932,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F9DDE2EF1B623BC10066A8D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f7b3ea346e79128b950f665afc8744b87b436510 b0b24d2b1bc790e8e1079d4f1e6796e41df0c4830d5bfd494a00a7263d364467";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3820BF751B00986E008C93E2 /* Sources */ = {
@@ -1159,6 +1184,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "First Shoe Experience/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1186,6 +1215,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: C. & J. CLARK (HOLDINGS) LTD/";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "First Shoe Experience/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

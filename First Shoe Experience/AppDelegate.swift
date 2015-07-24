@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pageController.pageIndicatorTintColor = UIColor (red: (236/255.0), green: (236/255.0), blue: (236/255.0), alpha: 1.0)
         pageController.currentPageIndicatorTintColor = UIColor .whiteColor()
         pageController.backgroundColor = UIColor .whiteColor()
+        Fabric.with([Crashlytics()])
+
         return true
     }
 
