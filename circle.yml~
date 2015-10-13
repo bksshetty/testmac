@@ -1,8 +1,0 @@
-machine:
-  xcode:
-    version: "7.0"
-test:
-  override:
-    - ./scripts/add-key.sh
-    - ipa build -c Distribution
-    - ./scripts/remove-key.sh
