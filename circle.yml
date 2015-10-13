@@ -1,9 +1,6 @@
 machine:
   xcode:
     version: "7.0"
-command:  
-  - chmod +x ./scripts/add-key.sh
-  - chmod +x ./scripts/remove-key.sh
 test:
   override:
     - ./scripts/add-key.sh
