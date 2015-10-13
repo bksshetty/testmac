@@ -1,3 +1,0 @@
-App version (0.01):
-
-- Setting up AW16.
