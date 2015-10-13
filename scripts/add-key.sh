@@ -1,6 +1,6 @@
 #!/bin/sh
 
-KEYCHAIN_PASSWORD=circleci
+KEYCHAIN_PASSWORD=indian
 
 security create-keychain -p $KEYCHAIN_PASSWORD ios-build.keychain
 security import ./scripts/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
