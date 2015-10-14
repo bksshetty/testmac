@@ -9,3 +9,4 @@
 #ls Payload
 ls AW16.app.dSYM
 ls AW16.app
+ls
