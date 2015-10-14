@@ -12,4 +12,4 @@ test:
       PROVISIONING_PROFILE="security import ./scripts/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign"
       -sdk iphonesimulator
       -scheme "ClarksCollection"
-      build -./scripts/deploy.sh
+      build 
