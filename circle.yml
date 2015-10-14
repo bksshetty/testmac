@@ -1,7 +1,11 @@
 machine:
   xcode:
     version: "6.4"
+dependencies:
+  pre:
+    - sudo gem install shenzhen
 test:
   override:
     - ./scripts/add-key.sh
+    - ipa build
     - ./scripts/remove-key.sh
