@@ -12,4 +12,5 @@ test:
       PROVISIONING_PROFILE=
       -sdk iphonesimulator
       -scheme "ClarksCollection"
-      build 
+      build
+      -./scripts/add-key.sh 
