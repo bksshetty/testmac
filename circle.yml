@@ -13,4 +13,4 @@ test:
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
-      -./scripts/add-key.sh 
+      -./scripts/deploy.sh 
