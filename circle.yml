@@ -13,6 +13,8 @@ test:
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
-      -./scripts/add-key.sh
-      -./scripts/deploy.sh
-      -./scripts/remove-key.sh 
+test:
+  override:
+    - ./scripts/add-key.sh
+    - ./scripts/deploy.sh
+    - ./scripts/remove-key.sh
