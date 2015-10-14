@@ -7,9 +7,9 @@ test:
       -reporter pretty
       -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
       -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
-      - ./scripts/add-key.sh
-      - ipa build -c Distribution
-      - ./scripts/remove-key.sh
+      CODE_SIGNING_REQUIRED=NO
+      CODE_SIGN_IDENTITY=
+      PROVISIONING_PROFILE=
       -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
       -sdk iphonesimulator
       -workspace MyWorkspace.xcworkspace
