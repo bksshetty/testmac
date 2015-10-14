@@ -1,5 +1,5 @@
-IPA_NAME=`find . -iname *.ipa`
-CRASHLYTICS=`find . -iname 'Crashlytics.framework'`
+IPA_NAME=`find / -iname *.ipa`
+CRASHLYTICS=`find / -iname 'Crashlytics.framework'`
 if [ -f "$IPA_NAME" ] && [ -d "$CRASHLYTICS" ]; then
 "$CRASHLYTICS/submit" $API_KEY $BUILD_SECRET -ipaPath "$IPA_NAME" -emails kirthanshetty@hotmail.com
 else
