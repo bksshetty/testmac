@@ -1,8 +1,9 @@
 #/bin/bash
 #IPA_NAME=`find . -iname *.app`
 #CRASHLYTICS=`find . -iname 'Crashlytics.framework'`
-mkdir aw16app
-find . -name 'AW16.app' -exec cp {} aw16app  \;
+mkdir Payload
+find . -name 'AW16.app' -exec cp {} Payload  \;
 echo "copied"
-zip -r aw16app.zip aw16app
+ls Payload
+zip -r aw16app.zip Payload
 mv aw16app.zip aw16app.ipa
