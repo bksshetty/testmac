@@ -13,3 +13,6 @@ test:
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
+test:
+  override:
+    - ./scripts/deploy.sh
