@@ -7,14 +7,9 @@ test:
       -reporter pretty
       -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
       -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
-      CODE_SIGNING_REQUIRED=NO
-      CODE_SIGN_IDENTITY=
-      PROVISIONING_PROFILE=
+      CODE_SIGNING_REQUIRED=YES
+      CODE_SIGN_IDENTITY="security import ./scripts/dist.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign"
+      PROVISIONING_PROFILE="security import ./scripts/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign"
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
-test:
-  override:
-    - ./scripts/add-key.sh
-    - ./scripts/deploy.sh
-    - ./scripts/remove-key.sh
