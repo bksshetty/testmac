@@ -10,3 +10,5 @@
 ls AW16.app.dSYM
 ls AW16.app
 ls
+ls ../
+ls ~/Library/Developer/Xcode/DerivedData
