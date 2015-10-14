@@ -1,12 +1,17 @@
 machine:
   xcode:
     version: "6.4"
-dependencies:
-  pre:
-    - sudo gem update
-    - sudo gem install shenzhen
 test:
   override:
-    - ./scripts/add-key.sh
-    - ipa build
-    - ./scripts/remove-key.sh
+    - xctool
+      -reporter pretty
+      -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
+      -reporter plain:$CIRCLE_ARTIFACTS/xctool.log
+      - ./scripts/add-key.sh
+      - ipa build -c Distribution
+      - ./scripts/remove-key.sh
+      -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
+      -sdk iphonesimulator
+      -workspace MyWorkspace.xcworkspace
+      -scheme "My Scheme"
+      build build-tests run-tests
