@@ -3,6 +3,7 @@ machine:
     version: "6.4"
 dependencies:
   pre:
+    - gem update
     - sudo gem install shenzhen
 test:
   override:
