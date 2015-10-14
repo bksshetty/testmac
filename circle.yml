@@ -12,5 +12,4 @@ test:
       PROVISIONING_PROFILE=
       -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
       -sdk iphonesimulator
-      -scheme "My Scheme"
-      build build-tests run-tests
+      build 
