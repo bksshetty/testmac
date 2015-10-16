@@ -2,10 +2,9 @@ machine:
   xcode:
     version: "6.4"
 dependencies:
-  post:
+  pre:
     - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
-  pre:
     - sudo gem install rubygems-update
     - sudo update_rubygems
     - sudo gem install rhc
