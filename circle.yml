@@ -3,7 +3,6 @@ machine:
     version: "6.4"
 dependencies:
   pre:
-    - sudo brew install wget
     - curl -O https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
     - sudo gem install rubygems-update
