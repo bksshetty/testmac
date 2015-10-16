@@ -4,7 +4,6 @@ machine:
 dependencies:
   pre:
     - sudo gem install shenzhen
-    - sudo gem remove highline
     - sudo gem install highline --version 1.7.2
 test:
   override:
