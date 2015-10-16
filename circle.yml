@@ -15,4 +15,14 @@ test:
       PROVISIONING_PROFILE="security import ./scripts/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign"
       -sdk iphonesimulator
       -scheme "ClarksCollection"
-      ipa build
+      build
+test:
+  override:
+    - ./scripts/add-key.sh
+    - ipa build -c Distribution
+    - ./scripts/remove-key.sh
+deployment:
+  hockey:
+    branch: master
+    commands:
+      - ipa distribute:crashlytics -c Crashlytics.framework -a API_TOKEN -s BUILD_SECRET
