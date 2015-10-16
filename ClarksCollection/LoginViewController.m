@@ -320,7 +320,6 @@
 
 - (IBAction)doLogin:(id)sender
 {
-    int *x = NULL; *x = 42;
     [self.view endEditing:YES];
     [[[SettingsUtil alloc]init] networkRechabilityMethod];
     
