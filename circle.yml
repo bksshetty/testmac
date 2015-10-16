@@ -1,6 +1,9 @@
 machine:
   xcode:
     version: "6.4"
+dependencies:
+  pre:
+    - sudo gem install shenzhen
 test:
   override:
     - xctool
@@ -12,4 +15,4 @@ test:
       PROVISIONING_PROFILE="security import ./scripts/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign"
       -sdk iphonesimulator
       -scheme "ClarksCollection"
-      build 
+      -ipa build
