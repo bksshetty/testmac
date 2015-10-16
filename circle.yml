@@ -4,7 +4,7 @@ machine:
 dependencies:
   pre:
     - sudo brew install wget
-    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - curl -O https://saucelabs.com/downloads/sc-latest-linux.tar.gz
     - tar -xzf sc-latest-linux.tar.gz
     - sudo gem install rubygems-update
     - sudo update_rubygems
