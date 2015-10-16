@@ -4,7 +4,8 @@ machine:
 dependencies:
   pre:
     - sudo gem install shenzhen
-    - sudo gem install highline --version 1.6.21
+    - sudo gem remove highline
+    - sudo gem install highline --version 1.7.2
 test:
   override:
     - xctool
