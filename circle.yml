@@ -10,6 +10,8 @@ dependencies:
     - sudo gem install highline --version 1.7.2
 test:
   override:
+    - ./scripts/add-key.sh
+    - ipa build -c Distribution
     - xctool
       -reporter pretty
       -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
@@ -20,10 +22,6 @@ test:
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
-test:
-  override:
-    - ./scripts/add-key.sh
-    - ipa build -c Distribution
 deployment:
   hockey:
     branch: master
