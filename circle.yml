@@ -8,6 +8,8 @@ dependencies:
     - sudo gem install rhc
     - sudo gem install shenzhen
     - sudo gem install highline --version 1.7.2
+    - sudo pip install Appium-Python-Client
+    - sudo pip install pytest
 test:
   override:
     - ./scripts/add-key.sh
