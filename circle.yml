@@ -5,7 +5,7 @@ dependencies:
   pre:
     - sudo gem install rubygems-update
     - sudo update_rubygems
-    - gem install rhc
+    - sudo gem install rhc
     - sudo gem install shenzhen
     - sudo gem install highline --version 1.7.2
 test:
