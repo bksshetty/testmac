@@ -15,7 +15,7 @@ test:
   override:
     - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
         background: true
-    - appium 
+    - appium: 
         background: true
     - ./scripts/add-key.sh
     - ipa build -c Distribution
