@@ -28,8 +28,6 @@ class SimpleIOSSauceTests(SauceTestCase):
           password = self.driver.find_element_by_name('pass')
           password.set_value('test')
           self.driver.find_element_by_name('LOGIN').click()
-          self.driver.find_element_by_name('GLOBAL').click()
-          self.driver.find_element_by_name('APPLY').click()
            # action.tap(el).perform()
         except Exception, e:
             print e
