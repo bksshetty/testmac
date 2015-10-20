@@ -9,14 +9,12 @@ dependencies:
     - sudo update_rubygems
     - sudo gem install rhc
     - sudo gem install shenzhen
-    - sudo pip install Appium-Python-Client
-    - sudo pip install pytest
+    - brew install node
+    - npm install -g appium
+    - npm install wd
+    - appium &
 test:
   override:
-    - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
-        background: true
-    - appium: 
-        background: true
     - ./scripts/add-key.sh
     - ipa build -c Distribution
     - xctool
