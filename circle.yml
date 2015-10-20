@@ -9,7 +9,6 @@ dependencies:
     - sudo update_rubygems
     - sudo gem install rhc
     - sudo gem install shenzhen
-    - sudo gem install highline --version 1.7.2
     - sudo pip install Appium-Python-Client
     - sudo pip install pytest
 test:
@@ -18,12 +17,6 @@ test:
         background: true
     # Wait for tunnel to be ready
     - while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
-    - python -m hello.hello_app:
-        background: true
-    # Wait for app to be ready
-    - curl --retry 10 --retry-delay 2 -v http://localhost:5000
-    # Run selenium tests
-    - nosetests
     - ./scripts/add-key.sh
     - ipa build -c Distribution
     - xctool
