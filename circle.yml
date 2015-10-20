@@ -14,7 +14,6 @@ dependencies:
     - sudo pip install pytest
 test:
   override:
-    - ipa build -c Distribution
     - cd sc-*-linux && ./bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready:
         background: true
     # Wait for tunnel to be ready
@@ -26,6 +25,7 @@ test:
     # Run selenium tests
     - nosetests
     - ./scripts/add-key.sh
+    - ipa build -c Distribution
     - xctool
       -reporter pretty
       -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml
