@@ -12,7 +12,6 @@ class  AppiumTests(unittest.TestCase):
         desired_caps['platformVersion'] = '8.4'
         desired_caps['deviceName'] = 'iPad Air'
         desired_caps['app'] = abspath('/Users/distiller/testmac/AW16.ipa')
-        desired_caps['appiumVersion'] = '1.4.8'
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
         
 
@@ -29,9 +28,6 @@ class  AppiumTests(unittest.TestCase):
           password.set_value('test')
           self.driver.find_element_by_name('LOGIN').click()
           self.driver.find_element_by_name('GLOBAL').click()
-          self.driver.find_element_by_name('APPLY').click()
-          self.driver.find_element_by_name('CONTINUE').click()
-          self.driver.find_element_by_name('MENU').click()
            # action.tap(el).perform()
         except Exception, e:
             print e
