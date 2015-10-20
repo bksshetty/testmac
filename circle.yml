@@ -9,10 +9,8 @@ dependencies:
     - sudo update_rubygems
     - sudo gem install rhc
     - sudo gem install shenzhen
-    - brew install node
-    - npm install -g appium
-    - npm install wd
-    - appium &
+    - sudo pip install Appium-Python-Client
+    - sudo pip install pytest
 test:
   override:
     - ./scripts/add-key.sh
