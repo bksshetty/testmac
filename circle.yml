@@ -12,7 +12,8 @@ dependencies:
     - brew install node
     - npm install -g appium
     - npm install wd
-    - appium &
+    - appium:
+          background: true
     - sudo pip install Appium-Python-Client
     - sudo pip install pytest
 test:
