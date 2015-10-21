@@ -34,4 +34,5 @@ deployment:
   hockey:
     branch: master
     commands:
+      - cp -r /Users/distiller/Library/Developer/Xcode/DerivedData/ClarksCollection-alxmlvsmhisrlbcdwhucuoexpvtb/Build/Products/Debug-iphonesimulator/AW16.app $CIRCLE_ARTIFACTS/
       - ipa distribute:crashlytics -c Crashlytics.framework -a $API_KEY -s $BUILD_SECRET
