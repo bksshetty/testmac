@@ -35,4 +35,4 @@ deployment:
     branch: master
     commands:
       - cp -r /Users/distiller/testmac/AW16.ipa $CIRCLE_ARTIFACTS/
-      - ipa distribute:crashlytics -c Crashlytics.framework -a $API_KEY -s $BUILD_SECRET -emails kirthanshetty@hotmail.com
+      - ipa distribute:crashlytics -c Crashlytics.framework -a $API_KEY -s $BUILD_SECRET
