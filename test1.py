@@ -14,7 +14,7 @@ class  AppiumTests(unittest.TestCase):
         desired_caps['platformName'] = 'iOS'
         desired_caps['platformVersion'] = '8.4'
         desired_caps['deviceName'] = 'iPad Air'
-        desired_caps['app'] = abspath('/Users/openly/Desktop/AW16.app')
+        desired_caps['app'] = abspath('/Users/distiller/Library/Developer/Xcode/DerivedData/ClarksCollection-alxmlvsmhisrlbcdwhucuoexpvtb/Build/Products/Debug-iphonesimulator/AW16.app')
         desired_caps['appiumVersion'] = '1.4.8'
         self.driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
         
@@ -27,7 +27,7 @@ class  AppiumTests(unittest.TestCase):
         try:
           #  action = TouchAction(self.driver)
           email = self.driver.find_element_by_name('email')
-          email.set_value('demo')
+          email.set_value('dem44')
           password = self.driver.find_element_by_name('pass')
           password.set_value('test')
           self.driver.find_element_by_name('LOGIN').click()
