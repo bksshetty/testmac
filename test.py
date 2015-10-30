@@ -19,7 +19,7 @@ class  AppiumTests(unittest.TestCase):
         try:
           #  action = TouchAction(self.driver)
           email = self.driver.find_element_by_name('email')
-          email.set_value('demo')
+          email.set_value('demo1')
           password = self.driver.find_element_by_name('pass')
           password.set_value('test')
           self.driver.find_element_by_name('LOGIN').click()
