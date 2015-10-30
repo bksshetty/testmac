@@ -16,6 +16,10 @@ dependencies:
           background: true
     - sudo pip install Appium-Python-Client
     - sudo pip install pytest
+general:
+  branches:
+    only:
+      - test
 test:
   override:
     - ./scripts/add-key.sh
