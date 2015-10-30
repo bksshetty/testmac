@@ -30,7 +30,7 @@ test:
       -sdk iphonesimulator
       -scheme "ClarksCollection"
       build
-    - ./scripts/remove-key.sh
+    # - ./scripts/remove-key.sh
 deployment:
   hockey:
     branch: master
